@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoBooth | Jerry</title>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/Jerry.jpg" alt="Jerry Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chính</a></li>
+                <li><a href="gallery.html">Thư viện</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- body content -->
+    <div class="photobooth-container">
+        <div class="title-container">
+            <h1>Welcome to the Jerry Photo Booth!</h1>
+        </div>
+        <div class="delay-options">
+
+            <label for="delay-select"><strong>Delay:</strong></label>
+            <select id="delay-select">
+                <option value="3" selected>3s</option>
+                <option value="5">5s</option>
+                <option value="10">10s</option>
+            </select>
+
+            <label for="photo-count-select" style="margin-left:20px;"><strong>Photos:</strong></label>
+            <select id="photo-count-select">
+                <option value="2">2 ảnh</option>
+                <option value="3" selected>3 ảnh</option>
+                <option value="4">4 ảnh</option>
+                <option value="6">6 ảnh</option>
+            </select>
+        </div>
+        <div class="camera-container">
+            <!-- Hiệu ứng camera -->
+            <div class="filter-buttons">
+                <button id="filter-normal">Bình thường</button>
+                <button id="filter-sepia">Sepia</button>
+                <button id="filter-blackwhite">Đen & Trắng</button>
+                <button id="filter-invert">Đảo Màu</button>
+                <button id="flipButton">Lật Camera</button>
+            </div>
+            <!-- Khung hình -->
+            <div class="camera">
+                <video id="video" autoplay></video>
+            </div>
+
+            <!-- Ảnh chụp -->
+            <div class="photo" id="photo-gallery"></div>
+        </div>
+
+        <div class="countdown">3</div>
+
+        <div class="start-btn-container">
+            <button id="start-capturing">Bắt đầu chụp</button>
+        </div>
+    </div>
+    <!-- Js -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
