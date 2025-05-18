@@ -211,3 +211,91 @@ header {
 #frame-color-swatches button:hover {
   border: 2px solid #222;
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 12px 16px;
+    max-width: 100%;
+  }
+  .gallery-container, .photobooth-container {
+    padding: 0 12px;
+  }
+  .gallery-photo-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    padding: 12px;
+  }
+  .gallery-photo-img {
+    width: 120px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px 8px;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    align-items: flex-start;
+  }
+  .gallery-title, .title-container h1 {
+    font-size: 1.5rem;
+  }
+  .gallery-photo-layout {
+    gap: 16px;
+  }
+  .gallery-photo-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .gallery-photo-img {
+    width: 100px;
+    height: 80px;
+  }
+  #download-photo-btn, #frame-color-label {
+    font-size: 1rem;
+  }
+  #frame-color-picker {
+    width: 36px;
+    height: 36px;
+  }
+  .photobooth-frame-preview {
+    padding: 10px 10px 4px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 8px 2px;
+  }
+  .logo img {
+    height: 36px;
+  }
+  .gallery-container, .photobooth-container {
+    padding: 0 2px;
+  }
+  .gallery-title, .title-container h1 {
+    font-size: 1.1rem;
+  }
+  .gallery-photo-img {
+    width: 80px;
+    height: 60px;
+  }
+  #download-photo-btn {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+  }
+  #frame-color-picker {
+    width: 28px;
+    height: 28px;
+  }
+  #frame-color-swatches button {
+    width: 24px;
+    height: 24px;
+  }
+}
