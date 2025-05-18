@@ -87,15 +87,16 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
 .gallery-title {
     font-family: 'Poppins', Arial, sans-serif;
-    font-size: 2.2rem;
-    font-weight: bold;
-    margin-bottom: 24px;
+    font-size: 2rem;
+    font-weight: 700;
     color: #111;
+    margin-bottom: 24px;
+    text-align: center;
 }
 
 .gallery-photo-layout {
@@ -107,7 +108,11 @@ header {
 
 .gallery-photo-grid {
     display: grid;
-    gap: 20px;
+    gap: 16px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    padding: 18px;
     justify-items: center;
     align-items: center;
 }
@@ -119,11 +124,90 @@ header {
 }
 
 .gallery-photo-img {
-    width: 140px;
-    height: 110px;
+    width: 150px;
+    height: 130px;
     object-fit: cover;
-    border-radius: 10px;
+    /* border-radius: 10px; */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
     background: #111;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
-    border: 2px solid #222;
+}
+
+#download-photo-btn {
+  margin-top: 24px;
+  padding: 12px 32px;
+  border-radius: 24px;
+  border: 2px solid #222;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: #fff;
+  color: #222;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.09);
+}
+#download-photo-btn:hover {
+  background: #222;
+  color: #fff;
+  box-shadow: 2px 8px 20px rgba(0,0,0,0.15);
+}
+
+#frame-color-label {
+  margin-bottom: 0;
+  margin-right: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+}
+#frame-color-picker {
+  margin-bottom: 0;
+  margin-right: 16px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  background: #fff;
+}
+.photobooth-frame-preview {
+  transition: background 0.2s;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 18px 18px 8px 18px;
+  position: relative;
+}
+.photobooth-frame-preview .gallery-photo-grid {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+.photobooth-frame-preview .gallery-photo-img {
+  border-radius: 8px;
+}
+.photobooth-frame-preview div:last-child {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+#frame-color-swatches {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0 10px 0;
+  align-items: center;
+}
+#frame-color-swatches button {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  transition: border 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+#frame-color-swatches button:hover {
+  border: 2px solid #222;
 }

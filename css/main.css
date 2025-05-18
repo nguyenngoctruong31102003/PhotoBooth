@@ -212,9 +212,9 @@ header {
 
 .photo-slot img.captured-photo {
     display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
+    width: 140px;
+    height: 110px;
+    border-radius: 8px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.10);
 }
 
